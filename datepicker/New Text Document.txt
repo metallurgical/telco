@@ -1,0 +1,17 @@
+// letak pada <body>
+<script src="datepicker.js" language="javascript"></script>
+
+<div id="datepicker" style="position:absolute; width:277px; height:271px; z-index:1; visibility: hidden;" onmouseover="javascript:dpmouseover=true;" onmouseout="javascript:dpmouseover=false;">
+  <object id="fdatepicker" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" type="application/x-shockwave-flash" width="230" height="230">
+    <param name="movie" value="datepicker.swf" />
+    <param name="wmode" value="transparent" />
+    <param name="quality" value="high" />
+    <param name="swfversion" value="8.0.35.0" />
+    <embed name="fdatepicker" wmode="transparent" src="datepicker.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="230" height="230"></embed>
+  </object>
+</div>
+
+
+//input
+<input type="text" name="takhir">
+	<a href="#"><img id="dpicon" src="datepicker.gif" alt="date picker" width="17" height="20" border="0" /></a>
