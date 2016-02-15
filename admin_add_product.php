@@ -80,16 +80,8 @@ session_start();
         <b>Product brand:</b><br />
     <select name="product_brand" class="input_teks_log"/> 
     	<option value="">-- Please Select --</option>
-        <option value="ACER">ACER</option>
         <option value="IBM">IBM</option>
-        <option value="COMPAQ">COMPAQ</option>
-        <option value="DELL">DELL</option>
-        <option value="TOSHIBA">TOSHIBA</option>
-        <option value="MAC">APPLE MAC</option>
-        <option value="SAMSUNG">SAMSUNG</option>
          <option value="HP">HP</option>
-          <option value="ASUS">ASUS</option>
-           <option value="LENOVO">LENOVO</option>
         
         </select>
     <br />
@@ -98,9 +90,8 @@ session_start();
         <b>Product category:</b><br />
     <select name="product_category" class="input_teks_log"/> 
     	<option value="">-- Please Select --</option>
-        <option value="Desktop">Desktop</option>
-        <option value="Component">Component</option>
-        <option value="Laptop/Notebook">Laptop & Notebook</option>
+        <option value="Cable">Cable</option>
+        <option value="Meter">Meter</option>
         
         
         </select>

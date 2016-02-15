@@ -1,12 +1,12 @@
 <?php
 session_start();
 include("config.php");
-$email = $_REQUEST['email'];
-$customer_p = $_REQUEST['customer_p'];
+$email = @$_REQUEST['email'];
+$customer_p = @$_REQUEST['customer_p'];
 
-$login = $_REQUEST['login'];
+$login = @$_REQUEST['login'];
 
-if($login=="user")
+if(@$login=="user")
 {
 
 $masuk = mysql_query("select *from customer where email='$email' and customer_password='$customer_p'")or die(mysql_error());

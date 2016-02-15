@@ -58,8 +58,8 @@ a#vlb{display:none}
             <br />
             <div class="user_login" id="user">
             <form action="user_login_process.php?login=user" method="post">
-            <p>E-mail address<br /><input type="text" size="30" class="input_teks" name="email"/></p>
-            <p>Password<br /><input type="password" size="30" class="input_teks" name="customer_p"/></p>
+            <p>E-mail address<br /><input type="text" class="input_teks" name="email"/></p>
+            <p>Password<br /><input type="password" class="input_teks" name="customer_p"/></p>
              <p><input type="reset" value="Reset" class="input_button"/><input type="submit" value="Submit" class="input_button"/></p>
              </form>
              <p>Login or <a href="register_account.php">create account</a> ? </p>
@@ -98,8 +98,8 @@ a#vlb{display:none}
  </script>
    
     <div id="kanan">
-   <div class="h2_background">Welcome <?php if($_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
     </div>
      
      

@@ -1,9 +1,9 @@
 <?php
 session_start();
- $customer_id = $_SESSION['customer_id'];
+ $customer_id = @$_SESSION['customer_id'];
 
 include("config.php");
- $product_id =$_GET['product_id'];
+ $product_id =@$_GET['product_id'];
  //$customer_id = $_GET['customer_id'];
 
 ?>
@@ -73,8 +73,8 @@ include("config.php");
    
     <div align="justify">
     
-   <div class="h2_background">Welcome <?php if($_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
   <h2>Checkout : Follow step below to purchase</h2>
   <div class="content">
                 <h3>Basket</h3>
@@ -142,7 +142,7 @@ include("config.php");
     <h3><p class="accordian_style" id="second" style="border-top:2px solid white;"><a href="#zx">Step 2 :</a></p></h3>
 	<div id="zx">
 		<div class="content">
-        After select your order, please email us at rameara@yahoo.com for further information with included this information.<br />
+        After select your order, please email us at e-telco@yahoo.com for further information with included this information.<br />
         - Your name<br />
         - Your Ic<br />
         - Your Address</br>

@@ -1,6 +1,5 @@
 <?php
-mysql_connect("localhost","root","");
-mysql_select_db("sis_kom");
+include("config.php");
 
 $sesi_user = $_POST['sesi_user'];
 $product_id = $_POST['product_id'];

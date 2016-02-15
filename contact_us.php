@@ -46,21 +46,21 @@ session_start();
    
     <div align="justify">
     
-   <div class="h2_background">Welcome <?php if($_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
   
    <form action="contact_us_process.php" method="post" enctype="multipart/form-data" id="contact">
     <h2>Our Location</h2>
     <div class="contact-info">
       <div class="content"><div class="left"><b>Address:</b><br />
 
-40-C, Jalan Tok Lam,<br />
+40-Ccc, Jalan Tok Lama,<br />
 20100 Kuala Terengganu, Terengganu.<br /><br />
 
 
 <div class="left"><b>Branch Address:</b><br />
 
-G-03E, IT Centre Mydin Mall,<br />
+G-03Eee, Telcoooooooo,<br />
 Padang Hiliran, 20050 Kuala Terenggnu.
 
 
@@ -69,11 +69,11 @@ Padang Hiliran, 20050 Kuala Terenggnu.
         <br />
       <div class="right">
                 <b>Telephone:</b><br />
-        09 620 3450 / 3451<br />
+        09 123 4567 / 3451<br />
         <br />
         <div class="right">
                 <b>Faxs:</b><br />
-        09 624 2398<br />
+        09 456 1234<br />
         <br />
                       </div>
 

@@ -78,8 +78,8 @@ session_start();
  </script>
    
     <div class="kanan3 clearfix">
-   <div class="h2_background">Welcome <?php if($_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
        
        
        <center>
@@ -138,7 +138,7 @@ session_start();
     </td>
     </tr>
     <tr>
-    <td width="100" > <font color="#990000">RM <?php echo $get_hh['product_price_unit'];?></font><br /><br /><!--<input type="hidden" value="<?php $_SESSION['user_name'];?>" id="sesi_user"/>--><div class="input_button" align="center" style="width:100px">Add to cart</div><br /><a href="u_view_cart.php?customer_id=<?php echo $_SESSION['customer_id'];?>&product_id=<?php echo $product_id;?>"><div class="input_button_check" align="center" style="width:100px">Checkout</div></a></td>
+    <td width="100" > <font color="#990000">RM <?php echo $get_hh['product_price_unit'];?></font><br /><br /><!--<input type="hidden" value="<?php $_SESSION['user_name'];?>" id="sesi_user"/>--><div class="input_button" align="center" style="width:100px">Add to cart</div><br /><a href="u_view_cart.php?customer_id=<?php echo @$_SESSION['customer_id'];?>&product_id=<?php echo $product_id;?>"><div class="input_button_check" align="center" style="width:100px">Checkout</div></a></td>
   </tr>
 </table>
 

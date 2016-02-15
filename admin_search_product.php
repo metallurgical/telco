@@ -75,9 +75,8 @@ session_start();
                     <b>Product category:</b>
                      <select name="product_category" class="input_teks_log"/> 
                         <option value="">-- Please Select --</option>
-                        <option value="Desktop">Desktop</option>
-                        <option value="Component">Component</option>
-                        <option value="Laptop/Notebook">Laptop & Notebook</option>
+                        <option value="Cable">Cable</option>
+                        <option value="Meter">Meter</option>
                         
                         
                         </select> &nbsp;&nbsp;&nbsp;<input type="submit" id="tutup" value="Search" class="input_button"/>
@@ -89,7 +88,7 @@ session_start();
                 </div>
         <br />
         		<div class="content">
-                <h3>Search result <?php if(($product_name)||($product_category)){echo "with keyword <em><font color='red'>$product_name</font></em> and <em><font color='red'>$product_category</font></em> ";}?></h3>
+                <h3>Search result <?php if((@$product_name)||(@$product_category)){echo "with keyword <em><font color='red'>@$product_name</font></em> and <em><font color='red'>@$product_category</font></em> ";}?></h3>
                 <table width="900" cellpadding="0" cellspacing="0" style="" class="table_ad" align="center">
   <tr>
     <th>Product picture</th>
@@ -100,21 +99,33 @@ session_start();
   </tr>
   <?php
   include("config.php");
-  $product_name = $_POST['product_name'];
-  $product_category = $_POST['product_category'];
+  $product_name = @$_POST['product_name'];
+  $product_category = @$_POST['product_category'];
   
   $cari = mysql_query("select *from product where product_category='$product_category' and product_name like '%$product_name%'");
-  while($get_cari = mysql_fetch_array($cari))
-  {
+  $rows = mysql_num_rows($cari);
+
+  if ( $rows > 0 ) {
+    while($get_cari = mysql_fetch_array($cari))
+    {
+    ?>
+     <tr height="60" >
+      <td style="border-left:1px solid #EDEDED;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><img src="images_pc/<?php echo $get_cari['product_pic'];?>" height="60" width="60" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/></td>
+      <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><font color="#38B0ED"><b><?php echo $get_cari['product_name'];?></b></font></td>
+      <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><?php echo $get_cari['product_category'];?></td>
+      <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;">[ <a href="admin_search_product_view.php?product_id=<?php echo $get_cari['product_id'];?>">view </a> ] </td>
+      <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;">[ <a href="admin_search_product_delete.php?product_id=<?php echo $get_cari['product_id'];?>" onclick="return confirm('Are you sure to delete this file??')">delete </a> ] </td>
+    </tr>
+    <?php
+    }
+  }
+  else {
   ?>
-   <tr height="60" >
-    <td style="border-left:1px solid #EDEDED;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><img src="images_pc/<?php echo $get_cari['product_pic'];?>" height="60" width="60" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/></td>
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><font color="#38B0ED"><b><?php echo $get_cari['product_name'];?></b></font></td>
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><?php echo $get_cari['product_category'];?></td>
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;">[ <a href="admin_search_product_view.php?product_id=<?php echo $get_cari['product_id'];?>">view </a> ] </td>
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;">[ <a href="admin_search_product_delete.php?product_id=<?php echo $get_cari['product_id'];?>" onclick="return confirm('Are you sure to delete this file??')">delete </a> ] </td>
-  </tr>
-  <?php
+    <tr height="60" colspa >
+      <td style="border-left:1px solid #EDEDED;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;">No data found.</td>
+    </tr>
+    <?php
+    
   }
   ?>
 </table>

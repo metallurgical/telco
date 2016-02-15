@@ -67,8 +67,8 @@ session_start();
    
     <div align="justify">
     
-   <div class="h2_background">Welcome <?php if($_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
   <h2>Checkout information</h2>
    <div id="accordian">        
 	<h3><p class="accordian_style" id="first" style="border-top:2px solid white;"><a href="#zs">Step 1 :</a></p></h3>
@@ -85,7 +85,7 @@ session_start();
     <h3><p class="accordian_style" id="second" style="border-top:2px solid white;"><a href="#zx">Step 2 :</a></p></h3>
 	<div id="zx">
 		<div class="content">
-        After select your order, please email us at rameara@yahoo.com for further information with included this information.<br />
+        After select your order, please email us at e-telco@yahoo.com for further information with included this information.<br />
         - Your name<br />
         - Your Ic<br />
         - Your Address</br>

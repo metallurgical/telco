@@ -3,9 +3,9 @@
 include("config.php");
 
 extract($_POST);
-$file_name=$_FILES['product_pic']['name'];
+$file_name=@$_FILES['product_pic']['name'];
 
-$file_tmp_name = $_FILES['product_pic']['tmp_name'];  
+$file_tmp_name = @$_FILES['product_pic']['tmp_name'];  
 
 $km = "abcdefghijklmnopqrSTUVWXYZABCDEFGHIJKLMNOPQRz123456789";
 		$l_km = strlen($km);

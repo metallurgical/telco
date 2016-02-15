@@ -66,7 +66,7 @@ session_start();
                 
         <br />
         		<div class="content">
-                <h3>Orders list <?php if(($product_name)&&($product_category)){echo "with keyword <em><font color='red'>$product_name</font></em> and <em><font color='red'>$product_category</font></em> ";}?></h3>
+                <h3>Orders list <?php if((@$product_name)&&(@$product_category)){echo "with keyword <em><font color='red'>$product_name</font></em> and <em><font color='red'>$product_category</font></em> ";}?></h3>
                 <table width="900" cellpadding="0" cellspacing="0" style="" class="table_ad" align="center">
   <tr>
     <th>Customer name</th>

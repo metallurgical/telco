@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 			echo "<script type='text/javascript'>";
 			echo "alert('Succesful create account')";
 			echo "</script>";
-			echo "<meta http-equiv='refresh' content='0; url=user_login_process.php?email=$email&customer_p=$customer_password'>";
+			echo "<meta http-equiv='refresh' content='0; url=user_login_process.php?email=$email&customer_p=$customer_password&login=user'>";
 		
 		
 	}

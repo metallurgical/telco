@@ -80,8 +80,8 @@ include("config.php");
  </script>
    
     <div class="kanan3 clearfix">
-   <div class="h2_background">Welcome <?php if($_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
        
        
        <center>
@@ -118,8 +118,8 @@ include("config.php");
        <form>
        <?php
 	   
-	   $kategory = $_GET['kategory'];
-	   $p_brand = $_GET['p_brand'];
+	   $kategory = @$_GET['kategory'];
+	   $p_brand = @$_GET['p_brand'];
 	   
 	   if(($kategory)&&($p_brand==""))
 	   {
@@ -140,7 +140,7 @@ include("config.php");
      <input type="hidden" value="<?php echo $get_hh['product_id'];?>" class="product_id"/>
      <input type="hidden" value="<?php echo $_SESSION['customer_id'];?>" class="customer_id"/>
     </td>
-    <td width="100" style="border-left:1px solid #EDEDED;margin-top:-30px;"> <font color="#990000">RM <?php echo $get_hh['product_price_unit'];?></font><br /><br /><!--<input type="hidden" value="<?php $_SESSION['user_name'];?>" id="sesi_user"/>--><a href="u_product_list_view.php?product_id=<?php echo $get_hh['product_id'];?>&customer_id=<?php echo $_SESSION['customer_id'];?>"><div class="input_button" align="center"  >View</div></a></td>
+    <td width="100" style="border-left:1px solid #EDEDED;margin-top:-30px;"> <font color="#990000">RM <?php echo $get_hh['product_price_unit'];?></font><br /><br /><!--<input type="hidden" value="<?php $_SESSION['user_name'];?>" id="sesi_user"/>--><a href="u_product_list_view.php?product_id=<?php echo $get_hh['product_id'];?>&customer_id=<?php echo @$_SESSION['customer_id'];?>"><div class="input_button" align="center"  >View</div></a></td>
   </tr>
 </table>
 <?php
@@ -166,7 +166,7 @@ include("config.php");
     <!--<input type="text" value="<?php echo $get_hh2['product_id'];?>" class="a" onkepUp="return hh()"/>-->
       <input type="hidden" value="<?php echo $_SESSION['customer_id'];?>" class="customer_id"/>
     </td>
-    <td width="100" style="border-left:1px solid #EDEDED;margin-top:-30px;"> <font color="#990000">RM <?php echo $get_hh2['product_price_unit'];?></font><br /><br /><a href="u_product_list_view.php?product_id=<?php echo $get_hh2['product_id'];?>&customer_id=<?php echo $_SESSION['customer_id'];?>"><div class="input_button" align="center"  >View</div></a></td>
+    <td width="100" style="border-left:1px solid #EDEDED;margin-top:-30px;"> <font color="#990000">RM <?php echo $get_hh2['product_price_unit'];?></font><br /><br /><a href="u_product_list_view.php?product_id=<?php echo $get_hh2['product_id'];?>&customer_id=<?php echo @$_SESSION['customer_id'];?>"><div class="input_button" align="center"  >View</div></a></td>
   </tr>
 </table>
 <?php

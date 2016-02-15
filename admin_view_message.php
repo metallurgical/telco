@@ -66,7 +66,7 @@ session_start();
                 
         <br />
         		<div class="content">
-                <h3>Message list <?php if(($product_name)||($product_category)){echo "with keyword <em><font color='red'>$product_name</font></em> and <em><font color='red'>$product_category</font></em> ";}?></h3>
+                <h3>Message list <?php if((@$product_name)||(@$product_category)){echo "with keyword <em><font color='red'>$product_name</font></em> and <em><font color='red'>$product_category</font></em> ";}?></h3>
                 <table width="900" cellpadding="0" cellspacing="0" style="" class="table_ad" align="center">
   <tr>
     <th>Sender</th>
@@ -77,8 +77,8 @@ session_start();
   </tr>
   <?php
   include("config.php");
-  $product_name = $_POST['product_name'];
-  $product_category = $_POST['product_category'];
+  $product_name = @$_POST['product_name'];
+  $product_category = @$_POST['product_category'];
   
   $cari = mysql_query("select *from message_mail");
   while($get_cari = mysql_fetch_array($cari))
