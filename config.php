@@ -1,4 +1,4 @@
 <?php
-mysql_connect("localhost","root","abc123");
+mysql_connect("localhost","root","");
 mysql_select_db("sis_kom");
 ?>
