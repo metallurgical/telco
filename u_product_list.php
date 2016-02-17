@@ -30,40 +30,15 @@ include("config.php");
     </div>
     
     <div id="bawah_banner">
-                <table width="950" border="0" cellspacing="1" cellpadding="2">
-          <tr>
-            <td><img src="images/10510075.jpg" width="300" class="gambar"/></td>
-            <td><img src="images/10510052.jpg" width="300" class="gambar"/></td>
-            <td><img src="images/10916059.jpg" width="300" class="gambar"/></td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
-
+        <?php include("3pic.php");?>
     </div>
     <br />
     
     <div id="kiri">
    
     	<div id="dalam_kiri">
-        	
-            
-            
-            
-            <div class="h2_background" id="admin_log">Information</div><br />
-            <div class="user_login" id="admin">
-             <ul>
-             	<li>Check our latest brand in menu above</li>
-                <li>We update products daily</li>
-                <li>Stay here as a family</li>
-                <li>Below are new arrival
-                	<ul>
-                    	<li>Speaker</li>
-                        <li>Fan latop</li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-        </div>
+          <?php include("information.php");?>
+      </div>
     
     </div>
  
@@ -133,9 +108,17 @@ include("config.php");
     <td width="120"><img src="images_pc/<?php echo $get_hh['product_pic'];?>" height="80" width="100" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/></td>
     <td align="left"><div style="margin-top:-10px;text-align:left"><font color="#38B0ED"><b><?php echo $get_hh['product_name'];?>
     </b></font></div><br />
-    				<div>
-                    <?php echo $get_hh['product_description1'];?><br /><?php echo $get_hh['product_description2'];?>
-                    </div>
+    				<div>Product Description/Specification :-
+              <ul>
+                <?php 
+                $desc = explode( ';', $get_hh2['product_description1'] );
+                foreach ( $desc as $key => $value ) {
+                  if ( $value != '' )
+                    echo '<li>'.$value.'</li>';
+                }
+                ?>
+              </ul>
+            </div>
      <input type="hidden" value="<?php echo $_SESSION['user_name'];?>" class="sesi_user"/>
      <input type="hidden" value="<?php echo $get_hh['product_id'];?>" class="product_id"/>
      <input type="hidden" value="<?php echo $_SESSION['customer_id'];?>" class="customer_id"/>
@@ -156,12 +139,27 @@ include("config.php");
 	   ?> <input type="hidden" value="<?php echo $get_hh2['product_id'];?>" class="product_id" name="hh"/>
        		<table width="600" border="0" cellspacing="3" cellpadding="2" style="border:1px solid #EDEDED;border-left:none;padding:5px 5px 5px 5px;margin:3px;">
   <tr>
-    <td width="120"><img src="images_pc/<?php echo $get_hh2['product_pic'];?>" height="80" width="100" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/></td>
-    <td align="left"><div style="margin-top:-10px;text-align:left"><font color="#38B0ED"><b><?php echo $get_hh2['product_name'];?>
-    </b></font></div><br />
-    				<div>
-                    <?php echo $get_hh2['product_description1'];?><br /><?php echo $get_hh2['product_description2'];?>
-                    </div>
+    <td width="120">
+      <img src="images_pc/<?php echo $get_hh2['product_pic'];?>" height="80" width="100" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/>
+    </td>
+    <td align="left">
+    <div style="margin-top:-10px;text-align:left">
+      <font color="#38B0ED">
+        <b><?php echo $get_hh2['product_name'];?></b>
+      </font>
+    </div>
+    <br />
+    				<div>Product Description/Specification :-
+              <ul>
+                <?php 
+                $desc = explode( ';', $get_hh2['product_description1'] );
+                foreach ( $desc as $key => $value ) {
+                  if ( $value != '' )
+                    echo '<li>'.$value.'</li>';
+                }
+                ?>
+              </ul>
+            </div>
      <input type="hidden" value="<?php echo $_SESSION['user_name'];?>" class="sesi_user"/>
     <!--<input type="text" value="<?php echo $get_hh2['product_id'];?>" class="a" onkepUp="return hh()"/>-->
       <input type="hidden" value="<?php echo $_SESSION['customer_id'];?>" class="customer_id"/>

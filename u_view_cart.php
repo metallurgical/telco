@@ -55,16 +55,8 @@ include("config.php");
       <?php include("menu_user.php");?>
     </div>
     
-    <div id="bawah_banner">
-                <table width="950" border="0" cellspacing="1" cellpadding="2">
-          <tr>
-            <td><img src="images/10510075.jpg" width="300" class="gambar"/></td>
-            <td><img src="images/10510052.jpg" width="300" class="gambar"/></td>
-            <td><img src="images/10916059.jpg" width="300" class="gambar"/></td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
-
+     <div id="bawah_banner">
+        <?php include("3pic.php");?>
     </div>
     <br />
     
@@ -134,7 +126,7 @@ include("config.php");
        
         
 		<div class="content">
-        Guest or members must <a href="u_login.php">login</a> first to buy from this website, if doesnt have any id, please <a href="register_account.php">create an account</a>. If already have an id <big>ignore</big> this message.
+        Guest or members must <a href="index.php">login</a> first to buy from this website, if doesnt have any id, please <a href="register_account.php">create an account</a>. If already have an id <big>ignore</big> this message.
         </div>
 		
 	</div>

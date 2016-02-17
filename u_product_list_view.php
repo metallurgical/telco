@@ -22,46 +22,24 @@ session_start();
 <center>
 <div id="kandungan_besar">
 	<div id="banner">
-   	  <?php include("banner.php");?>
+      <?php include("banner.php");?>
     </div>
-	
+  
 
     <div id="menu">
       <?php include("menu_user.php");?>
     </div>
     
     <div id="bawah_banner">
-                <table width="950" border="0" cellspacing="1" cellpadding="2">
-          <tr>
-            <td><img src="images/10510075.jpg" width="300" class="gambar"/></td>
-            <td><img src="images/10510052.jpg" width="300" class="gambar"/></td>
-            <td><img src="images/10916059.jpg" width="300" class="gambar"/></td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
-
+        <?php include("3pic.php");?>
     </div>
     <br />
     
     <div id="kiri">
    
-    	<div id="dalam_kiri">
-        	
-            <div class="h2_background" id="admin_log">Information</div><br />
-            <div class="user_login" id="admin">
-             <ul>
-             	<li>Check our latest brand in menu above</li>
-                <li>We update products daily</li>
-                <li>Stay here as a family</li>
-                <li>Below are new arrival
-                	<ul>
-                    	<li>Speaker</li>
-                        <li>Fan latop</li>
-                    </ul>
-                </li>
-              </ul>
-            </div>
-        </div>
+      <div id="dalam_kiri">
+          <?php include("information.php");?>
+      </div>
     
     </div>
  
@@ -73,8 +51,7 @@ session_start();
  $("#admin_log").click(function(){
 	 $("#admin").slideToggle(1500);
 	  $("#user").slideUp(1500);
- });
- 
+ }); 
  </script>
    
     <div class="kanan3 clearfix">
@@ -129,12 +106,22 @@ session_start();
    <tr>
    
     <td align="left">
-    				<div><?php echo $get_hh['product_category'];?><br />
-                    <?php echo $get_hh['product_description1'];?><br /><?php echo $get_hh['product_description2'];?>
+    				<div>
+                    <div>Product Description/Specification :-
+              <ul>
+                <?php 
+                $desc = explode( ';', $get_hh['product_description1'] );
+                foreach ( $desc as $key => $value ) {
+                  if ( $value != '' )
+                    echo '<li>'.$value.'</li>';
+                }
+                ?>
+              </ul>
+            </div>
                     </div>
-     <input type="hidden" value="<?php echo $_SESSION['user_name'];?>" class="sesi_user"/>
-     <input type="hidden" value="<?php echo $get_hh['product_id'];?>" class="product_id"/>
-     <input type="hidden" value="<?php echo $_SESSION['customer_id'];?>" class="customer_id"/>
+     <input type="hidden" value="<?php echo @$_SESSION['user_name'];?>" class="sesi_user"/>
+     <input type="hidden" value="<?php echo @$get_hh['product_id'];?>" class="product_id"/>
+     <input type="hidden" value="<?php echo @$_SESSION['customer_id'];?>" class="customer_id"/>
     </td>
     </tr>
     <tr>

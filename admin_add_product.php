@@ -98,8 +98,10 @@ session_start();
     <br />
         <br />
         
-        
-    <b>Product description 1:</b><br />
+    <b>Product description(For more details, separate with semicolumn ; ):</b><br />
+    <textarea name="product_description1" cols="30" rows="5" style="width: 30%;background:#F8F8F8;border:1px solid #CCCCCC"></textarea>
+    <br />    
+    <!-- <b>Product description 1:</b><br />
     <textarea name="product_description1" cols="30" rows="5" style="width: 30%;background:#F8F8F8;border:1px solid #CCCCCC"></textarea>
     <br />
 
@@ -107,7 +109,7 @@ session_start();
         
          <b>Product description 2:</b><br />
     <textarea name="product_description2" cols="30" rows="5" style="width: 30%;background:#F8F8F8;border:1px solid #CCCCCC"></textarea>
-    <br />
+    <br /> -->
 
         <br />
         

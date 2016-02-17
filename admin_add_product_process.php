@@ -20,9 +20,10 @@ $km = "abcdefghijklmnopqrSTUVWXYZABCDEFGHIJKLMNOPQRz123456789";
 			$path = "images_pc/$gf";
 			
 			$gy = move_uploaded_file($file_tmp_name,$path);
+
 			
-			
-$pro = mysql_query("insert into product values('','$product_name','$gf','$product_price_unit','$product_brand','$product_category','$product_description1','$product_description2')");
+$pro = mysql_query("insert into product values('','$product_name','$gf','$product_price_unit','$product_brand','$product_category','$product_description1','')");		
+/*$pro = mysql_query("insert into product values('','$product_name','$gf','$product_price_unit','$product_brand','$product_category','$product_description1','$product_description2')");*/
 
 if($pro)
 {
