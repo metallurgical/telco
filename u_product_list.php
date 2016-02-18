@@ -111,7 +111,7 @@ include("config.php");
     				<div>Product Description/Specification :-
               <ul>
                 <?php 
-                $desc = explode( ';', $get_hh2['product_description1'] );
+                $desc = explode( ';', $get_hh['product_description1'] );
                 foreach ( $desc as $key => $value ) {
                   if ( $value != '' )
                     echo '<li>'.$value.'</li>';
