@@ -14,7 +14,7 @@ $km = "abcdefghijklmnopqrSTUVWXYZABCDEFGHIJKLMNOPQRz123456789";
 		
 		for($c = 0; $c<$l_km;$c++)
 		{
-			$har = $har.$km[mt_rand(0,strlen($km))];
+			$har = $har.@$km[mt_rand(0,strlen($km))];
 		}
 			$gf = $har.$file_name;
 			$path = "images_pc/$gf";
