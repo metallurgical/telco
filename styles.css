@@ -66,7 +66,7 @@ body{
 	-moz-border-radius-bottomright:7px;
 	-webkit-border-top-right-radius: 7px;
  	-webkit-border-bottom-right-radius: 7px;
-	height:550px;
+	height:auto;
 	padding:5px 5px 5px 5px;
 	text-align:left;
 }
@@ -74,7 +74,7 @@ body{
 	-moz-border-radius:7px;
 	-webkit-border-radius:7px;
 	padding:5px 5px 5px 5px;
-	height:535px;
+	height:auto;
 	background:-moz-linear-gradient(#F2F2F2,#FFF,#FFF,#F2F2F2);
 	background:-webkit-linear-gradient(#F2F2F2,#FFF,#FFF,#F2F2F2);
 	color:#816666;

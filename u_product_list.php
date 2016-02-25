@@ -129,11 +129,11 @@ include("config.php");
 <?php
 	   }
 	   }
-	   elseif(($kategory)&&($p_brand))
+	   elseif(!$kategory && !$p_brand)
 	   {
 		   $kategory2 = $kategory;
 	   		$p_brand2 = $p_brand;
-		   $hh2 = mysql_query("select *from product where product_category='$kategory2' and product_brand='$p_brand2' order by product_id desc");
+		   $hh2 = mysql_query("select *from product order by product_id desc");
 	   while($get_hh2 = mysql_fetch_array($hh2))
 	   {
 	   ?> <input type="hidden" value="<?php echo $get_hh2['product_id'];?>" class="product_id" name="hh"/>
