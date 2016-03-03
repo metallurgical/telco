@@ -81,8 +81,8 @@ session_start();
     <select name="product_brand" class="input_teks_log"/> 
     	<option value="">-- Please Select --</option>
         <option value="IBM">IBM</option>
-         <option value="HP">HP</option>
-        
+        <option value="HP">HP</option>
+        <option value="Others">Others</option>
         </select>
     <br />
         <br />
@@ -92,6 +92,7 @@ session_start();
     	<option value="">-- Please Select --</option>
         <option value="Cable">Cable</option>
         <option value="Meter">Meter</option>
+        <option value="Others">Others</option>
         
         
         </select>

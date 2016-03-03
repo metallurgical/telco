@@ -106,11 +106,11 @@ function hapus_data(message,url)
      <font color="#38B0ED"><b><?php echo $get_sel['product_description1'];?></b></font>
     <br />
 
-        <br />
+        <!-- <br />
         
          <b>Product description 2:</b><br />
      <font color="#38B0ED"><b><?php echo $get_sel['product_description2'];?></b></font>
-    <br />
+    <br /> -->
 
         <br />
         

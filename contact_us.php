@@ -54,14 +54,14 @@ session_start();
     <div class="contact-info">
       <div class="content"><div class="left"><b>Address:</b><br />
 
-40-Ccc, Jalan Tok Lama,<br />
-20100 Kuala Terengganu, Terengganu.<br /><br />
+Lot 889-A, Jalan Pengkalan Chepa,<br />
+16100 Kota Bharu, Kelantan.<br /><br />
 
 
 <div class="left"><b>Branch Address:</b><br />
 
-G-03Eee, Telcoooooooo,<br />
-Padang Hiliran, 20050 Kuala Terenggnu.
+G-03E, CP Tower,<br />
+Shah Alam, 40000 Selangor.
 
 
 
@@ -69,11 +69,11 @@ Padang Hiliran, 20050 Kuala Terenggnu.
         <br />
       <div class="right">
                 <b>Telephone:</b><br />
-        09 123 4567 / 3451<br />
+        09 7738001 / 019 9388306<br />
         <br />
         <div class="right">
                 <b>Faxs:</b><br />
-        09 456 1234<br />
+        09 7738002<br />
         <br />
                       </div>
 

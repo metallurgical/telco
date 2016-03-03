@@ -77,7 +77,7 @@ session_start();
                         <option value="">-- Please Select --</option>
                         <option value="Cable">Cable</option>
                         <option value="Meter">Meter</option>
-                        
+                        <option value="Others">Others</option>
                         
                         </select> &nbsp;&nbsp;&nbsp;<input type="submit" id="tutup" value="Search" class="input_button"/>
                     <br />

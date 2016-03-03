@@ -75,6 +75,7 @@ include("config.php");
     <th>Product picture</th>
     <th>Product name</th>
     <th>Product category</th>
+    <th>Price(RM)</th>
    
     <th>Remove</th>
   </tr>
@@ -87,23 +88,31 @@ include("config.php");
   
 	  if($row_cari>0)
 	  {
-	  while($get_cari = mysql_fetch_array($cari))
-	  {
-	  	$pro_id=$get_cari['product_id'];
-	   $cari1 = mysql_query("select *from product where product_id='$pro_id'");
-	   while($get_cari1 = mysql_fetch_array($cari1))
-	   {
-  ?>
-   <tr height="60" >
-    <td style="border-left:1px solid #EDEDED;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><img src="images_pc/<?php echo $get_cari1['product_pic'];?>" height="60" width="60" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/></td>
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><font color="#38B0ED"><b><?php echo $get_cari1['product_name'];?></b></font></td>
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;" align="center"><?php echo $get_cari1['product_category'];?></td>
-    
-    <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;" align="center">[ <a href="u_view_cart_delete.php?product_id=<?php echo $get_cari['product_buy_id'];?>&customer_id=<?php echo $customer_id;?>" onclick="return confirm('Are you sure to remove this product??')">remove </a> ] </td>
-  </tr>
-  <?php
-	   }
-  	  }
+      $sum = 0;
+  	  while($get_cari = mysql_fetch_array($cari))
+  	  {
+  	  	  $pro_id=$get_cari['product_id'];
+  	     $cari1 = mysql_query("select *from product where product_id='$pro_id'");
+  	     while($get_cari1 = mysql_fetch_array($cari1))
+  	     {
+    ?>
+           <tr height="60" >
+            <td style="border-left:1px solid #EDEDED;border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><img src="images_pc/<?php echo $get_cari1['product_pic'];?>" height="60" width="60" style="padding:8px 8px 8px 8px;border:1px solid #D6D6D6;"/></td>
+            <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;"><font color="#38B0ED"><b><?php echo $get_cari1['product_name'];?></b></font></td>
+            <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;" align="center"><?php echo $get_cari1['product_category'];?></td>
+            <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;" align="center">
+            <?php 
+            $sum += $get_cari1['product_price_unit'];
+            echo $get_cari1['product_price_unit'];
+            ?></td>
+            
+            <td style="border-right:1px solid #EDEDED;border-bottom:1px solid #EDEDED;" align="center">[ <a href="u_view_cart_delete.php?product_id=<?php echo $get_cari['product_buy_id'];?>&customer_id=<?php echo $customer_id;?>" onclick="return confirm('Are you sure to remove this product??')">remove </a> ] </td>
+          </tr>
+    <?php
+  	     }
+    	}
+
+      echo "<tr><td colspan='3' align='right'>Total(RM) : </td><td align='center'>$sum</td></tr>";
 	  }
 	  else
 	  {

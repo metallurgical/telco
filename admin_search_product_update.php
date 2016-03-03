@@ -84,16 +84,9 @@ $get_sel = mysql_fetch_array($sel);
         <b>Product brand:</b><br />
     <select name="product_brand" class="input_teks_log"/> 
     	<option value="">-- Please Select --</option>
-        <option value="ACER" <?php if($get_sel['product_brand']=="ACER")echo 'selected'?>>ACER</option>
         <option value="IBM" <?php if($get_sel['product_brand']=="IBM")echo 'selected'?>>IBM</option>
-        <option value="COMPAQ" <?php if($get_sel['product_brand']=="COMPAQ")echo 'selected'?>>COMPAQ</option>
-        <option value="DELL" <?php if($get_sel['product_brand']=="DELL")echo 'selected'?>>DELL</option>
-        <option value="TOSHIBA" <?php if($get_sel['product_brand']=="TOSHIBA")echo 'selected'?>>TOSHIBA</option>
-        <option value="MAC" <?php if($get_sel['product_brand']=="MAC")echo 'selected'?>>APPLE MAC</option>
-        <option value="SAMSUNG" <?php if($get_sel['product_brand']=="SAMSUNG")echo 'selected'?>>SAMSUNG</option>
-         <option value="HP" <?php if($get_sel['product_brand']=="HP")echo 'selected'?>>HP</option>
-          <option value="ASUS" <?php if($get_sel['product_brand']=="ASUS")echo 'selected'?>>ASUS</option>
-           <option value="LENOVO" <?php if($get_sel['product_brand']=="LENOVO")echo 'selected'?>>LENOVO</option>
+        <option value="HP" <?php if($get_sel['product_brand']=="HP")echo 'selected'?>>HP</option>
+        <option value="Others" <?php if($get_sel['product_brand']=="Others")echo 'selected'?>>Others</option>
         
         </select>
     <br />
@@ -102,9 +95,9 @@ $get_sel = mysql_fetch_array($sel);
         <b>Product category:</b><br />
     <select name="product_category" class="input_teks_log"/> 
     	<option value="">-- Please Select --</option>
-        <option value="Desktop" <?php if($get_sel['product_category']=="Desktop")echo 'selected'?>>Desktop</option>
-        <option value="Component" <?php if($get_sel['product_category']=="Component")echo 'selected'?>>Component</option>
-        <option value="Laptop/Notebook" <?php if($get_sel['product_category']=="Laptop/Notebook")echo 'selected'?>>Laptop & Notebook</option>
+        <option value="Cable" <?php if($get_sel['product_category']=="Cable")echo 'selected'?>>Cable</option>
+        <option value="Meter" <?php if($get_sel['product_category']=="Meter")echo 'selected'?>>Meter</option>
+        <option value="Others" <?php if($get_sel['product_category']=="Others")echo 'selected'?>>Others</option>
         
         
         </select>
@@ -116,11 +109,11 @@ $get_sel = mysql_fetch_array($sel);
     <textarea name="product_description1" cols="30" rows="5" style="width: 30%;background:#F8F8F8;border:1px solid #CCCCCC"><?php echo $get_sel['product_description1'];?></textarea>
     <br />
 
-        <br />
+        <!-- <br />
         
          <b>Product description 2:</b><br />
     <textarea name="product_description2" cols="30" rows="5" style="width: 30%;background:#F8F8F8;border:1px solid #CCCCCC"><?php echo $get_sel['product_description2'];?></textarea>
-    <br />
+    <br /> -->
 
         <br />
         

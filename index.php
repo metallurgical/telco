@@ -83,10 +83,62 @@ a#vlb{display:none}
  });
  
  </script>
-   
+<style type="text/css">
+.panel {
+    padding: 5px;
+}
+
+.panel .panel-header {
+    padding : 5px;
+    background: #F1F1F1;
+    color : #000;
+    border-radius : 5px;
+    -webkit-border-radius : 5px;
+    -o-border-radius : 5px;
+    -moz-border-radius : 5px;
+    border: 1px solid #E6E6E6;
+}
+
+.panel .panel-body {
+    padding : 5px;
+}
+
+.image {
+    border : 1px solid #F1F1F1;
+    -webkit-border-radius : 5px;
+    -o-border-radius : 5px;
+    -moz-border-radius : 5px;
+}
+</style>
     <div id="kanan">
-   <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
-	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  </div>
+        <div class="h2_background">Welcome <?php if(@$_SESSION['user_name']==""){ echo "<font color='#E47D25'>Guest</font> to our shopping online store.";}else{
+	   echo "<font color='#E47D25'>".@$_SESSION['user_name']."</font> to our shopping online store. <a href='logout_user.php'>Logout</a>";}?>  
+        </div>
+
+        <div class="panel">
+        <br/>
+            <div class="panel-header">Newest Products</div>
+            <div class="panel-body">
+                <img src="images/a.png" width="200" height="200" class="image">
+                <img src="images/a1.jpg" width="200" height="200" class="image">
+                <img src="images/a2.png" width="200" height="200" class="image">
+            </div>
+        <br/>
+            <div class="panel-header">More Products</div>
+            <div class="panel-body">
+                <img src="images/a3.jpg" width="200" height="200" class="image">
+                <img src="images/a4.jpg" width="200" height="200" class="image">
+                <img src="images/a5.jpg" width="200" height="200" class="image">
+            </div>
+        
+        <br/>
+            <div class="panel-header">Recommended Products</div>
+            <div class="panel-body">
+                <img src="images/a6.jpg" width="200" height="200" class="image">
+                <img src="images/a7.png" width="200" height="200" class="image">
+                <img src="images/a8.jpg" width="200" height="200" class="image">
+            </div>
+        </div>
     </div>
      
      

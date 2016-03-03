@@ -85,11 +85,13 @@ session_start();
     <h3><p class="accordian_style" id="second" style="border-top:2px solid white;"><a href="#zx">Step 2 :</a></p></h3>
 	<div id="zx">
 		<div class="content">
-        After select your order, please email us at e-telco@yahoo.com for further information with included this information.<br />
+        After select your order, please email us at TelcoEquipment@yahoo.com for further information with included this information.<br />
         - Your name<br />
         - Your Ic<br />
         - Your Address</br>
-        - Your phone number.<br />
+        - Your phone number<br />
+	   - Bank in to CIMB or Maybank AC No : 8888898989<br />
+        - Use Cash on Delivery COD<br /> 
 		We will contact you and check your email as soon as posible.
         </div>
 	</div>

@@ -100,7 +100,7 @@ body{
 	float:right;
 	width:649px;
 	border:1px solid #ECECEC;
-	height:550px;
+	height:auto;
 	padding:5px 5px 5px 5px;
 	text-align:left;
 	/*background:-moz-linear-gradient(#F2F2F2,#FDFDFD,#FDFDFD,#F2F2F2);

@@ -1,19 +1,19 @@
 <?php
 session_start();
 include("config.php");
-$email = @$_REQUEST['email'];
+$email      = @$_REQUEST['email'];
 $customer_p = @$_REQUEST['customer_p'];
 
-$login = @$_REQUEST['login'];
+$login      = @$_REQUEST['login'];
 
 if(@$login=="user")
 {
 
-$masuk = mysql_query("select *from customer where email='$email' and customer_password='$customer_p'")or die(mysql_error());
-$get_m = mysql_fetch_array($masuk);
-$user_email = $get_m['email'];
-$user_name = $get_m['name'];
-$c_p = $get_m['customer_password'];
+$masuk       = mysql_query("select *from customer where email='$email' and customer_password='$customer_p'")or die(mysql_error());
+$get_m       = mysql_fetch_array($masuk);
+$user_email  = $get_m['email'];
+$user_name   = $get_m['name'];
+$c_p         = $get_m['customer_password'];
 $customer_id = $get_m['customer_id'];
 
 if(($c_p!=$customer_p)&&($email!=$user_email))
@@ -36,13 +36,13 @@ else
 }
 else
 {
-	$username=$_POST['username'];
-	$password = $_POST['password'];
-	$masuk = mysql_query("select *from user where username='$username' and password='$password'")or die(mysql_error());
-	$get_m = mysql_fetch_array($masuk);
+		$username  = $_POST['username'];
+		$password  = $_POST['password'];
+		$masuk     = mysql_query("select *from user where username='$username' and password='$password'")or die(mysql_error());
+		$get_m     = mysql_fetch_array($masuk);
 		
-	$user_name = $get_m['username'];
-	$c_p = $get_m['password'];
+		$user_name = $get_m['username'];
+		$c_p       = $get_m['password'];
 	
 	if(($user_name!=$username)&&($c_p!=$password)||($user_name==""))
 	{
